@@ -12,16 +12,12 @@
         <td>{{ $item->number }}</td>
     </tr>
     <tr>
-        <th>Pengiriman</th>
-        <td>Moelaikeun Delivery</td>
-    </tr>
-    <tr>
         <th>Alamat Lengkap</th>
         <td>{{ $item->address }}</td>
     </tr>
     <tr>
         <th>Total Harga</th>
-        <td>Rp {{ number_format($item->transaction_total) }}</td>
+        <td>Rp {{ number_format($item->transaction_total) }} | <a href="{{ $item->proof }}"> Bukti</a></a> </td>
     </tr>
     <tr>
         <th>Status Transaksi</th>
