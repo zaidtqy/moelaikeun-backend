@@ -8,8 +8,12 @@
         <td>{{ $item->email }}</td>
     </tr>
     <tr>
-        <th>Nomor</th>
+        <th>Nomor Telp</th>
         <td>{{ $item->number }}</td>
+    </tr>
+    <tr>
+        <th>Pengiriman ke</th>
+        <td>{{ $item->district }} dengan ongkos kirim Rp {{ number_format($item->shipFee) }}</td>
     </tr>
     <tr>
         <th>Alamat Lengkap</th>

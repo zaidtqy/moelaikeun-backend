@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddDestinationToTransactionsTable extends Migration
+class AddCourierToTransactionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,8 @@ class AddDestinationToTransactionsTable extends Migration
     {
         Schema::table('transactions', function (Blueprint $table) {
             $table->string('proof');
+            $table->integer('shipFee');
+            $table->string('district');
         });
     }
 
