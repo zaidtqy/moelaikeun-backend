@@ -50,7 +50,7 @@
                                             <i class="fa fa-times"></i>
                                         </a>
                                         @endif
-                                        <a href="#mymodal" data-remote="{{ route('transactions.show', $item->id) }}" data-toggle="modal" data-target="#mymodal" data-title="Detail Transaksi" class="btn btn-info btn-sm">
+                                        <a href="#mymodal" data-remote="{{ route('transactions.show', $item->id) }}" data-toggle="modal" data-target="#mymodal" data-title="Detail Transaksi <strong>{{$item->uuid}}</strong>" class="btn btn-info btn-sm">
                                             <i class="fa fa-eye"></i>
                                         </a>
                                         <a href="{{ route('transactions.edit', $item->id) }}" class="btn btn-info btn-sm">
