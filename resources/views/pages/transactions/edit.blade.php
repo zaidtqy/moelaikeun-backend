@@ -3,8 +3,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <strong>Ubah Transaksi</strong>
-        <small>{{ $item->uuid }}</small>
+        <strong>Ubah Transaksi ({{ $item->uuid }})</strong>
     </div>
     <div class="card-body card-block">
         <form action="{{ route('transactions.update', $item->id) }}" method="POST">
@@ -22,11 +21,11 @@
             </div>
             <div class="form-group">
                 <label for="number" class="form-control-label">Nomor HP</label>
-                <input type="text" name="number" value="{{ old('number') ? old('number') : $item->number }}" class="form-control @error('number') is-invalid @enderror" />
+                <input type="number" name="number" value="{{ old('number') ? old('number') : $item->number }}" class="form-control @error('number') is-invalid @enderror" />
                 @error('number') <div class="text-muted">{{ $message }}</div> @enderror
             </div>
             <div class="form-group">
-                <label for="address" class="form-control-label">Catatan Pemesan</label>
+                <label for="address" class="form-control-label">Alamat Lengkap</label>
                 <input type="text" name="address" value="{{ old('address') ? old('address') : $item->address }}" class="form-control @error('address') is-invalid @enderror" />
                 @error('address') <div class="text-muted">{{ $message }}</div> @enderror
             </div>

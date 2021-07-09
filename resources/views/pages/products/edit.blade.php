@@ -3,8 +3,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        <strong>Ubah Produk</strong>
-        <small>({{ $item->name }})</small>
+        <strong>Ubah Produk ({{ $item->name }})</strong>
     </div>
     <div class="card-body card-block">
         <form action="{{ route('products.update', $item->id) }}" method="POST">
