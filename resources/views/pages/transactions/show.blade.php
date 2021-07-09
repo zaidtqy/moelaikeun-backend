@@ -12,8 +12,8 @@
         <td>{{ $item->number }}</td>
     </tr>
     <tr>
-        <th>Pengiriman ke</th>
-        <td>{{ $item->district }} dengan ongkos kirim Rp {{ number_format($item->shipFee) }}</td>
+        <th>Kurir</th>
+        <td>{{ $item->courier }} ( Flat Ongkir Rp 20,000 ke {{ $item->district }} )</td>
     </tr>
     <tr>
         <th>Alamat Lengkap</th>
@@ -21,7 +21,11 @@
     </tr>
     <tr>
         <th>Total Harga</th>
-        <td>Rp {{ number_format($item->transaction_total) }} | <a href="{{ $item->proof }}"> Bukti</a></a> </td>
+        <td>Rp {{ number_format($item->transaction_total) }}</td>
+    </tr>
+    <tr>
+        <th>Transfer Via</th>
+        <td>{{ $item->transfer }}</td>
     </tr>
     <tr>
         <th>Status Transaksi</th>
